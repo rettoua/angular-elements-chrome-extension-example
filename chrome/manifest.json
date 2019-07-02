@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Angular-Elements example",
+  "short_name": "Angular-Element-Example",
+  "version": "1.0.0",
+  "permissions": [ "notifications", "contextMenus", "tabs", "storage" ],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Angular-Elements example"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "webPanelScriptWrap.js"  
+      ],
+      "all_frames": false,
+      "matches": [
+        "http://*/",
+        "https://*/"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "web-panel.js"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
