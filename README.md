@@ -1,1 +1,1 @@
-No info yet
+Using Angular-Elements with Chrome Extension example
